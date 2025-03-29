@@ -1,8 +1,11 @@
+// require('dotenv').config()
+import 'dotenv/config'
 import express from 'express';
 
 const app=express();
-const port=3000;
-
+const port=process.env.PORT || 3000;//yaha dikkat he isko environment variable me dalna padega 
+//nhi kiya to deploy nhi hoga digital ocean pe 
+//then add it in environment vRIABLES OF THE DEPLOYED ONE
 app.use(express.json());
 
 
